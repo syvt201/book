@@ -1,0 +1,380 @@
+Status code: 200
+<!DOCTYPE html>
+<html lang="vi">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Quản Lý Thư Viện
+  </title>
+  <style>
+   * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* CONTAINER CHUNG */
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* ================= HEADER ================= */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            margin-bottom: 20px;
+        }
+
+        header .container {
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav span {
+            margin: 0 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav span:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= BANNER ================= */
+        .banner {
+            margin-top: 112px;
+            position: relative;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 300px;
+            display: block;
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            width: 1000px;
+        }
+
+        /* ================= SECTION ================= */
+        .section {
+            width: 1000px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+        }
+
+        /* ================= BOOK LIST ================= */
+        .book-list {
+            text-align: center;
+        }
+
+        .book {
+            width: 200px;
+            display: inline-block;
+            margin: 10px;
+            border: 1px solid #ccc;
+            background-color: #fafafa;
+            position: relative;
+            vertical-align: top;
+            transition: all 0.3s ease;
+        }
+
+        .book img {
+            transition: transform 0.3s ease;
+        }
+
+        .book:hover img {
+            transform: scale(1.1);
+        }
+
+        .book img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .book p {
+            margin: 5px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .book:hover p {
+            transform: translateY(5px);
+        }
+
+        .label {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background-color: red;
+            color: white;
+            padding: 3px 6px;
+            font-size: 12px;
+            z-index: 10;
+        }
+
+        /* ================= TABLE ================= */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ecf0f1;
+        }
+
+        /* ================= FORM ================= */
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1abc9c;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- HEADER -->
+  <header>
+   <div class="container">
+    <h1 style="margin-top: 0;">
+     📚 THƯ VIỆN SINH VIÊN
+    </h1>
+    <nav>
+     <span>
+      <a href="#home">
+       Trang chủ
+      </a>
+     </span>
+     <span>
+      <a href="#book">
+       Sách
+      </a>
+     </span>
+     <span>
+      <a href="#borrow">
+       Mượn sách
+      </a>
+     </span>
+     <span>
+      Liên hệ
+     </span>
+    </nav>
+   </div>
+  </header>
+  <!-- BANNER -->
+  <div class="banner" id="home">
+   <img alt="" src="./banner.jpg"/>
+   <div class="banner-text">
+    <h2>
+     Hệ Thống Quản Lý Thư Viện
+    </h2>
+    <p>
+     📖 Tri thức – Kết nối – Phát triển
+    </p>
+   </div>
+  </div>
+  <!-- GIỚI THIỆU -->
+  <div class="section">
+   <h2>
+    📘 Giới thiệu thư viện
+   </h2>
+   <p>
+    Thư viện sinh viên là nơi lưu trữ và cung cấp các tài liệu học tập,
+            nghiên cứu phục vụ sinh viên và giảng viên trong nhà trường.
+   </p>
+  </div>
+  <!-- DANH MỤC SÁCH -->
+  <div class="section" id="book">
+   <h2>
+    📚 Danh mục sách
+   </h2>
+   <div class="book-list">
+    <div class="book">
+     <span class="label">
+      NEW
+     </span>
+     <img src="./first book.jpg"/>
+     <p>
+      <b>
+       Lập trình Web
+      </b>
+     </p>
+     <p style="padding-bottom: 2px;">
+      Thể loại: CNTT
+     </p>
+    </div>
+    <div class="book">
+     <img src="./second book.jpg"/>
+     <p>
+      <b>
+       Cơ sở dữ liệu
+      </b>
+     </p>
+     <p style="padding-bottom: 2px;">
+      Thể loại: CNTT
+     </p>
+    </div>
+    <div class="book">
+     <span class="label">
+      HOT
+     </span>
+     <img src="./third book.jpg"/>
+     <p>
+      <b>
+       Kỹ năng học tập
+      </b>
+     </p>
+     <p style="padding-bottom: 2px;">
+      Thể loại: Kỹ năng
+     </p>
+    </div>
+    <div class="book">
+     <img src="./forth book.jpg"/>
+     <p>
+      <b>
+       Toán rời rạc
+      </b>
+     </p>
+     <p style="padding-bottom: 2px;">
+      Thể loại: Toán học
+     </p>
+    </div>
+   </div>
+  </div>
+  <!-- BẢNG QUẢN LÝ -->
+  <div class="section">
+   <h2>
+    📊 Quản lý sách
+   </h2>
+   <table>
+    <tr>
+     <th>
+      Mã sách
+     </th>
+     <th>
+      Tên sách
+     </th>
+     <th>
+      Tác giả
+     </th>
+     <th>
+      Tình trạng
+     </th>
+    </tr>
+    <tr>
+     <td>
+      S001
+     </td>
+     <td>
+      Lập trình Web
+     </td>
+     <td>
+      Nguyễn Văn A
+     </td>
+     <td>
+      Còn
+     </td>
+    </tr>
+    <tr>
+     <td>
+      S002
+     </td>
+     <td>
+      Cơ sở dữ liệu
+     </td>
+     <td>
+      Trần Thị B
+     </td>
+     <td>
+      Hết
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- FORM MƯỢN SÁCH -->
+  <div class="section" id="borrow">
+   <h2>
+    📝 Mượn sách
+   </h2>
+   <input placeholder="Họ và tên" type="text"/>
+   <input placeholder="Mã sinh viên" type="text"/>
+   <input placeholder="Tên sách cần mượn" type="text"/>
+   <button>
+    Gửi yêu cầu
+   </button>
+  </div>
+  <!-- FOOTER -->
+  <footer>
+   <p>
+    © 2026 Thư viện Sinh viên
+   </p>
+  </footer>
+  <script>
+  </script>
+ </body>
+</html>
+
