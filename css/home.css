@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 112px;
+    background-color: #2d3e50;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+.container h1 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 22px;
+}
+
+.container ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.container ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* ----------------------------------------------------------------- */
